@@ -1,4 +1,6 @@
 using Tarea1Unidad1.Bloque1;
+using Tarea1Unidad1.Bloque2;
+using Tarea1Unidad1.Bloque3;
 
 namespace Tarea1Unidad1
 {
@@ -161,9 +163,127 @@ namespace Tarea1Unidad1
                         AreayPerimetro areayPerimetro = new AreayPerimetro(opcionFigura);
                         break;
                     case 7:
-                        Console.WriteLine("Domingo");
+                        Console.WriteLine("1. Bytes");
+                        Console.WriteLine("2. KB");
+                        Console.WriteLine("3. MB");
+                        Console.WriteLine("4. GB");
+                        Console.WriteLine("5. TB");
+
+                        Console.Write("Unidad de origen: ");
+                        int.TryParse(Console.ReadLine(), out int origen);
+
+                        Console.Write("Cantidad: ");
+                        double.TryParse(Console.ReadLine(), out double valor);
+
+                        Console.Write("Unidad de destino: ");
+                        int.TryParse(Console.ReadLine(), out int destino);
+
+                        ConversionUnidadesAlmacenamiento conversionUnidadesAlmacenamiento = new ConversionUnidadesAlmacenamiento(origen, destino, valor);
+
                         break;
                     case 8:
+                        Console.WriteLine("Ingrese horas trabajadas:");
+                        double.TryParse(Console.ReadLine(), out double horas);
+
+                        Console.WriteLine("Ingrese tarifa por hora:");
+                        double.TryParse(Console.ReadLine(), out double tarifa);
+
+                        CalculodeSalarioSemanal calculodeSalarioSemanal = new CalculodeSalarioSemanal(horas, tarifa);
+                        break;
+                    case 9:
+                        Console.WriteLine("Ingrese el primer lado:");
+                        double.TryParse(Console.ReadLine(), out double lado1);
+
+                        Console.WriteLine("Ingrese el segundo lado:");
+                        double.TryParse(Console.ReadLine(), out double lado2);
+
+                        Console.WriteLine("Ingrese el tercer lado:");
+                        double.TryParse(Console.ReadLine(), out double lado3);
+
+                        ClasificaciondeTriangulos clasificaciondeTriangulos = new ClasificaciondeTriangulos(lado1, lado2, lado3);
+
+                        break;
+                    case 10:
+                        Console.WriteLine("Ingrese la nota (0-100):");
+                        double.TryParse(Console.ReadLine(), out double nota);
+
+                        SistemadeCalificacionesdeUNAH sistemadeCalificacionesdeUNAH =
+                            new SistemadeCalificacionesdeUNAH(nota);
+
+                        break;
+                    case 11:
+                        Console.WriteLine("Ingrese el monto de la compra:");
+
+                        decimal.TryParse(Console.ReadLine(), out decimal montoCompra);
+
+                        CalculadoradeDescuentos calculadoradeDescuentos = new CalculadoradeDescuentos(montoCompra);
+
+                        break;
+                    case 12:
+                        Console.WriteLine("Ingrese el año:");
+                        int.TryParse(Console.ReadLine(), out int anio);
+
+                        Console.WriteLine("Ingrese el mes (1-12):");
+                        int.TryParse(Console.ReadLine(), out int mes);
+
+                        AnioBisiestoyDiasdelMes anioBisiestoyDiasdelMes = new AnioBisiestoyDiasdelMes(anio, mes);
+
+                        break;
+                    case 13:
+                        Console.WriteLine("Ingrese el día:");
+                        int.TryParse(Console.ReadLine(), out int dia);
+
+                        Console.WriteLine("Ingrese el mes:");
+                        int.TryParse(Console.ReadLine(), out int mess);
+
+                        Console.WriteLine("Ingrese el año:");
+                        int.TryParse(Console.ReadLine(), out int anioo);
+
+                        ValidadordeFecha validadordeFecha = new ValidadordeFecha(dia, mess, anioo);
+
+                        break;
+                    case 14:
+                        Console.WriteLine("Saldo disponible: L. 10000");
+                        Console.WriteLine("Ingrese el monto a retirar:");
+
+                        int.TryParse(Console.ReadLine(), out int retiro);
+
+                        CajeroAutomatico cajeroAutomatico =
+                            new CajeroAutomatico(retiro);
+
+                        break;
+                    case 15:
+                        Console.WriteLine("Ingrese un número:");
+                        int.TryParse(Console.ReadLine(), out int numero);
+
+                        TabladeMultiplicarExtendida tabladeMultiplicarExtendida =
+                            new TabladeMultiplicarExtendida(numero);
+
+                        break;
+                    case 16:
+                        Console.WriteLine("Ingrese el inicio del rango:");
+                        int.TryParse(Console.ReadLine(), out int inicio);
+
+                        Console.WriteLine("Ingrese el fin del rango:");
+                        int.TryParse(Console.ReadLine(), out int fin);
+
+                        NumerosPrimosenRango numerosPrimosenRango =
+                            new NumerosPrimosenRango(inicio, fin);
+
+                        break;
+                    case 17:
+                        Console.WriteLine("Dia no valido");
+                        break;
+                    case 18:
+                        Console.WriteLine("Dia no valido");
+                        break;
+                    case 19:
+                        Console.WriteLine("Dia no valido");
+                        break;
+                    case 20:
+                        Console.WriteLine("Dia no valido");
+                        break;
+                    case 21:
                         Console.WriteLine("Dia no valido");
                         break;
                 }

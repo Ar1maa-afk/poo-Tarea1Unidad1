@@ -1,23 +1,23 @@
 namespace Tarea1Unidad1.Bloque1
 {
     public class DesgloseBilletes
-{
-    public DesgloseBilletes(int monto)
     {
-        int[] billetes = { 500, 100, 50, 20, 10, 5, 2, 1 };
-
-        Console.WriteLine($"\nDesglose de L. {monto}");
-
-        foreach (int billete in billetes)
+        public DesgloseBilletes(int monto)
         {
-            int cantidad = monto / billete;
+            int[] billetes = { 500, 100, 50, 20, 10, 5, 2, 1 };
 
-            if (cantidad > 0)
+            Console.WriteLine($"\nDesglose de L. {monto}");
+
+            foreach (int billete in billetes)
             {
-                Console.WriteLine($"{cantidad} billete(s) de L. {billete}");
-                monto %= billete;
+                int cantidad = monto / billete;
+
+                if (cantidad > 0)
+                {
+                    Console.WriteLine($"{cantidad} billete(s) de L. {billete}");
+                    monto %= billete;
+                }
             }
         }
     }
-}
 }

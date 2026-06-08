@@ -47,16 +47,13 @@ namespace Tarea1Unidad1.Bloque1
                         return;
                     }
 
-                    // Área con fórmula de Herón
                     double s = (baseTri + l2 + l3) / 2;
                     area = Math.Sqrt(s * (s - baseTri) * (s - l2) * (s - l3));
 
-                    // Altura correspondiente a la base
                     double altura = (2 * area) / baseTri;
 
                     perimetro = baseTri + l2 + l3;
 
-                    Console.WriteLine($"Altura: {altura:F2}");
                     Console.WriteLine($"Área: {area:F2}");
                     Console.WriteLine($"Perímetro: {perimetro:F2}");
                     break;
