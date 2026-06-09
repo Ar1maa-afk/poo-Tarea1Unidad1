@@ -1,6 +1,8 @@
 using Tarea1Unidad1.Bloque1;
 using Tarea1Unidad1.Bloque2;
 using Tarea1Unidad1.Bloque3;
+using Tarea1Unidad1.Bloque4;
+using Tarea1Unidad1.Bloque5;
 
 namespace Tarea1Unidad1
 {
@@ -207,8 +209,7 @@ namespace Tarea1Unidad1
                         Console.WriteLine("Ingrese la nota (0-100):");
                         double.TryParse(Console.ReadLine(), out double nota);
 
-                        SistemadeCalificacionesdeUNAH sistemadeCalificacionesdeUNAH =
-                            new SistemadeCalificacionesdeUNAH(nota);
+                        SistemadeCalificacionesdeUNAH sistemadeCalificacionesdeUNAH = new SistemadeCalificacionesdeUNAH(nota);
 
                         break;
                     case 11:
@@ -248,16 +249,14 @@ namespace Tarea1Unidad1
 
                         int.TryParse(Console.ReadLine(), out int retiro);
 
-                        CajeroAutomatico cajeroAutomatico =
-                            new CajeroAutomatico(retiro);
+                        CajeroAutomatico cajeroAutomatico = new CajeroAutomatico(retiro);
 
                         break;
                     case 15:
                         Console.WriteLine("Ingrese un número:");
                         int.TryParse(Console.ReadLine(), out int numero);
 
-                        TabladeMultiplicarExtendida tabladeMultiplicarExtendida =
-                            new TabladeMultiplicarExtendida(numero);
+                        TabladeMultiplicarExtendida tabladeMultiplicarExtendida = new TabladeMultiplicarExtendida(numero);
 
                         break;
                     case 16:
@@ -267,25 +266,102 @@ namespace Tarea1Unidad1
                         Console.WriteLine("Ingrese el fin del rango:");
                         int.TryParse(Console.ReadLine(), out int fin);
 
-                        NumerosPrimosenRango numerosPrimosenRango =
-                            new NumerosPrimosenRango(inicio, fin);
+                        NumerosPrimosenRango numerosPrimosenRango = new NumerosPrimosenRango(inicio, fin);
 
                         break;
                     case 17:
-                        Console.WriteLine("Dia no valido");
+                        Console.WriteLine("Ingrese la cantidad de términos:");
+                        int.TryParse(Console.ReadLine(), out int n);
+
+                        SerieFibonacci serieFibonacci = new SerieFibonacci(n);
+
                         break;
                     case 18:
-                        Console.WriteLine("Dia no valido");
-                        break;
+                        Console.WriteLine("Ingrese n:");
+                        int.TryParse(Console.ReadLine(), out int nn);
+
+                        Console.WriteLine("Ingrese r:");
+                        int.TryParse(Console.ReadLine(), out int r);
+
+                        if (r > nn || nn < 0 || r < 0)
+                        {
+                            Console.WriteLine("Valores inválidos.");
+                        }
+                        else
+                        {
+                            FactorialyCombinaciones factorialyCombinaciones = new FactorialyCombinaciones(nn, r);
+                        }
+
+    break;
                     case 19:
-                        Console.WriteLine("Dia no valido");
+                        JuegodeAdivinanzas juegodeAdivinanzas = new JuegodeAdivinanzas();
                         break;
                     case 20:
-                        Console.WriteLine("Dia no valido");
+                        ValidaciondeContrasenia validaciondeContrasenia = new ValidaciondeContrasenia();
+
                         break;
                     case 21:
-                        Console.WriteLine("Dia no valido");
+                        Console.WriteLine("1. Triángulo");
+                        Console.WriteLine("2. Triángulo invertido");
+                        Console.WriteLine("3. Rombo");
+                        Console.WriteLine("4. Cuadrado hueco");
+
+                        Console.WriteLine("Seleccione una opción:");
+                        int.TryParse(Console.ReadLine(), out int option);
+
+                        Console.WriteLine("Ingrese el tamaño:");
+                        int.TryParse(Console.ReadLine(), out int tamanio);
+
+                        PatrondeAsteriscos patrondeAsteriscos =
+                            new PatrondeAsteriscos(option, tamanio);
+
                         break;
+                    case 22:
+                        Calculadoraconmenu calculadoraconmenu = new Calculadoraconmenu();
+                        break;
+                    case 23:
+                        Console.WriteLine("Cantidad de calificaciones:");
+                        int.TryParse(Console.ReadLine(), out int cantidad);
+
+                        EstadisticasdeCalificaciones estadisticas = new EstadisticasdeCalificaciones(cantidad);
+
+                        break;
+                    case 24:
+                        BusquedayOrdenamiento busquedayOrdenamiento = new BusquedayOrdenamiento();
+
+                        break;
+                    case 25:
+                        Console.WriteLine("Ingrese la cantidad de elementos:");
+
+                        int.TryParse(Console.ReadLine(), out int nnn);
+
+                        RotaciondeArreglo rotaciondeArreglo = new RotaciondeArreglo(nnn);
+
+                        break;
+                    case 26:
+                        FrecuenciadeElementos frecuenciadeElementos = new FrecuenciadeElementos();
+
+                        break;
+                    case 27:
+                        ArreglodeTemperaturas arreglodeTemperaturas = new ArreglodeTemperaturas();
+
+                        break;
+                    case 28:
+                        Console.WriteLine("Cantidad de estudiantes:");
+                        int.TryParse(Console.ReadLine(), out int estudiantes);
+
+                        MatrizdeNotasporParcial matrizdeNotasporParcial = new MatrizdeNotasporParcial(estudiantes);
+
+                        break;
+                    case 29:
+                        JuegodeGato juegodeGato = new JuegodeGato();
+
+                        break;
+                    case 30:
+                        InventarioSimple inventarioSimple = new InventarioSimple();
+
+                        break;
+                    
                 }
                 Console.WriteLine("\nPresione ENTER para volver al menú...");
                 Console.WriteLine("O escriba 0 para salir:");
